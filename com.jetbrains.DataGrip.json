@@ -53,9 +53,9 @@
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "11988fa7c618adf04810755385b1afe11e03515729b81fd3123dfd5fdd456bd4",
-          "size": 204351054,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2018.2.4.tar.gz"
+          "sha256": "aa456eee1c15e0c1d9bbc3f193887822afa26ec4824068acf5a1818fb4c24353",
+          "size": 253492658,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2018.2.5.tar.gz"
         },
         {
           "type": "file",
