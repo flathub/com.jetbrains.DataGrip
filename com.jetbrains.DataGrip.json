@@ -42,20 +42,20 @@
       "name": "datagrip",
       "buildsystem": "simple",
       "build-commands": [
-        "install -Dm0755 apply_extra /app/bin/apply_extra",
+        "install -Dm0755 -t /app/bin/ apply_extra",
         "install -Dm0755 datagrip.sh /app/bin/datagrip",
-        "install -Dm0644 datagrip.png /app/share/icons/hicolor/128x128/apps/com.jetbrains.DataGrip.png",
-        "install -Dm0644 -t /app/share/metainfo/ com.jetbrains.DataGrip.appdata.xml",
-        "install -Dm0644 -t /app/share/applications/ com.jetbrains.DataGrip.desktop"
+        "install -Dm0644 -t /app/share/applications/ com.jetbrains.DataGrip.desktop",
+        "install -Dm0644 -t /app/share/icons/hicolor/128x128/apps/ com.jetbrains.DataGrip.png",
+        "install -Dm0644 -t /app/share/metainfo/ com.jetbrains.DataGrip.appdata.xml"
       ],
       "sources": [
         {
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "aa456eee1c15e0c1d9bbc3f193887822afa26ec4824068acf5a1818fb4c24353",
-          "size": 253492658,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2018.2.5.tar.gz"
+          "sha256": "38d4b9ffec36bb6d96c2302f6da0ec31f30df859ea2fc20c22c150b3b417087a",
+          "size": 289206725,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2018.3.tar.gz"
         },
         {
           "type": "file",
@@ -67,13 +67,13 @@
         },
         {
           "type": "file",
-          "path": "datagrip.png"
+          "path": "com.jetbrains.DataGrip.png"
         },
         {
           "type": "script",
           "commands": [
             "mkdir datagrip/",
-            "tar -xzf datagrip.tar.gz -C datagrip/ --strip-components=1",
+            "tar -zxf datagrip.tar.gz -C datagrip/ --strip-components=1",
             "rm -f datagrip.tar.gz"
           ],
           "dest-filename": "apply_extra"
