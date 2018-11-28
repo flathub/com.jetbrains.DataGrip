@@ -21,20 +21,40 @@
   <launchable type="desktop-id">com.jetbrains.DataGrip.desktop</launchable>
   <screenshots>
     <screenshot type="default">
-      <image>https://www.jetbrains.com/datagrip/img/screenshots/query-console.png</image>
+      <image>https://www.jetbrains.com/datagrip/quick-start/img/01-choose-color.png</image>
     </screenshot>
     <screenshot>
-      <image>https://www.jetbrains.com/datagrip/img/screenshots/sql-refactoring.png</image>
+      <image>https://www.jetbrains.com/datagrip/quick-start/img/02-choose-color-schema.png</image>
     </screenshot>
     <screenshot>
-      <image>https://www.jetbrains.com/datagrip/img/screenshots/version-control.png</image>
+      <image>https://www.jetbrains.com/datagrip/quick-start/img/03-dialects.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.jetbrains.com/datagrip/quick-start/img/04-first-window.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.jetbrains.com/datagrip/quick-start/img/05-create-data-source.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.jetbrains.com/datagrip/quick-start/img/06-download.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.jetbrains.com/datagrip/quick-start/img/07-succesfull-test-connection.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.jetbrains.com/datagrip/quick-start/img/08-choose-schemas.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://www.jetbrains.com/datagrip/quick-start/img/11-query-and-result.png</image>
     </screenshot>
   </screenshots>
+  <url type="bugtracker">https://youtrack.jetbrains.com/issues/DBE/</url>
   <url type="homepage">https://www.jetbrains.com/datagrip/</url>
   <developer_name>JetBrains s.r.o.</developer_name>
   <content_rating type="oars-1.1" />
   <releases>
-    <release version="2018.2.5" date="2018-11-13" type="stable" />
-    <release version="2018.2.4" date="2018-09-17" type="stable" />
+    <release type="stable" date="2018-11-27" version="2018.3" />
+    <release type="stable" date="2018-11-13" version="2018.2.5" />
+    <release type="stable" date="2018-09-17" version="2018.2.4" />
   </releases>
 </component>
