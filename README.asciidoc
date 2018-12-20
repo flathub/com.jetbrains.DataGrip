@@ -14,12 +14,16 @@ Assuming `flatpak` and `flatpak-builder` are installed, follow the next steps:
 ----
 $ git clone https://github.com/flathub/com.jetbrains.DataGrip.git
 $ cd com.jetbrains.DataGrip/
+$ flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
 $ flatpak-builder build --force-clean --install-deps-from=flathub --install --user com.jetbrains.DataGrip.json
 
+# ...to uninstall the artifact
+$ flatpak uninstall --delete-data --user com.jetbrains.DataGrip
+
 # ...and to clean-up everything
-$ flatpak uninstall --user com.jetbrains.DataGrip
-$ rm -rf .flatpak-builder/ build/ ~/.var/app/com.jetbrains.DataGrip/
+$ rm -rf .flatpak-builder/ build/
 $ flatpak uninstall --unused --user
+$ flatpak remote-delete --user flathub
 ----
 
 == Roadmap

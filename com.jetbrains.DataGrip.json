@@ -42,10 +42,10 @@
       "name": "datagrip",
       "buildsystem": "simple",
       "build-commands": [
-        "install -Dm0755 -t /app/bin/ apply_extra",
         "install -Dm0755 datagrip.sh /app/bin/datagrip",
+        "install -Dm0755 -t /app/bin/ apply_extra",
         "install -Dm0644 -t /app/share/applications/ com.jetbrains.DataGrip.desktop",
-        "install -Dm0644 -t /app/share/icons/hicolor/128x128/apps/ com.jetbrains.DataGrip.png",
+        "install -Dm0644 -t /app/share/icons/hicolor/scalable/apps/ com.jetbrains.DataGrip.svg",
         "install -Dm0644 -t /app/share/metainfo/ com.jetbrains.DataGrip.appdata.xml"
       ],
       "sources": [
@@ -53,9 +53,9 @@
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "38d4b9ffec36bb6d96c2302f6da0ec31f30df859ea2fc20c22c150b3b417087a",
-          "size": 289206725,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2018.3.tar.gz"
+          "sha256": "491ff4f68f0bcc7ca616c062bcb65796941a5e53731329a068922a73ab57ca6e",
+          "size": 291916525,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2018.3.1.tar.gz"
         },
         {
           "type": "file",
@@ -67,7 +67,7 @@
         },
         {
           "type": "file",
-          "path": "com.jetbrains.DataGrip.png"
+          "path": "com.jetbrains.DataGrip.svg"
         },
         {
           "type": "script",
@@ -81,7 +81,8 @@
         {
           "type": "script",
           "commands": [
-            "exec env /app/extra/datagrip/bin/datagrip.sh \"$@\""
+            "ln -s /proc/mounts /etc/mtab",
+            "exec env TMPDIR=${XDG_CACHE_HOME}/tmp/ /app/extra/datagrip/bin/datagrip.sh \"$@\""
           ],
           "dest-filename": "datagrip.sh"
         }
