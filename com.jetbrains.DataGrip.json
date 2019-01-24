@@ -16,6 +16,7 @@
     "--talk-name=org.freedesktop.secrets"
   ],
   "modules": [
+    "shared-modules/gtk2/gtk2.json",
     {
       "name": "libsecret",
       "cleanup": [
@@ -33,8 +34,8 @@
       "sources": [
         {
           "type": "archive",
-          "sha256": "f4fa198d4e131f94d9ec84cfeaf6c124245e7ff3c0af11c76cc35332bfae5585",
-          "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.18.6/libsecret-0.18.6.tar.gz"
+          "sha256": "047a15af3a0eaf3344c10f138fe21561052104abd05d18d85b438e1d002c5ac3",
+          "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.18.7/libsecret-0.18.7.tar.gz"
         }
       ]
     },
@@ -53,9 +54,9 @@
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "491ff4f68f0bcc7ca616c062bcb65796941a5e53731329a068922a73ab57ca6e",
-          "size": 291916525,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2018.3.1.tar.gz"
+          "sha256": "062034e26204939bc1c0ff0d5147078e868c618195a78e4634c28cf1ea63416e",
+          "size": 313121329,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2018.3.2.tar.gz"
         },
         {
           "type": "file",
@@ -81,7 +82,6 @@
         {
           "type": "script",
           "commands": [
-            "ln -s /proc/mounts /etc/mtab",
             "exec env TMPDIR=${XDG_CACHE_HOME}/tmp/ /app/extra/datagrip/bin/datagrip.sh \"$@\""
           ],
           "dest-filename": "datagrip.sh"
