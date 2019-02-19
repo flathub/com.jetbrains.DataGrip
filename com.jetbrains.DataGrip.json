@@ -3,8 +3,8 @@
   "command": "datagrip",
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "18.08",
-  "separate-locales": false,
   "sdk": "org.freedesktop.Sdk",
+  "separate-locales": false,
   "finish-args": [
     "--device=dri",
     "--env=DATAGRIP_JDK=/app/extra/datagrip/jre64/",
@@ -43,20 +43,21 @@
       "name": "datagrip",
       "buildsystem": "simple",
       "build-commands": [
-        "install -Dm0755 datagrip.sh /app/bin/datagrip",
-        "install -Dm0755 -t /app/bin/ apply_extra",
-        "install -Dm0644 -t /app/share/applications/ com.jetbrains.DataGrip.desktop",
-        "install -Dm0644 -t /app/share/icons/hicolor/scalable/apps/ com.jetbrains.DataGrip.svg",
-        "install -Dm0644 -t /app/share/metainfo/ com.jetbrains.DataGrip.appdata.xml"
+        "unzip datagrip_logos.zip",
+        "install -D -m0644 logo.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
+        "install -D -m0755 datagrip.sh /app/bin/datagrip",
+        "install -D -m0644 -t /app/share/applications/ ${FLATPAK_ID}.desktop",
+        "install -D -m0644 -t /app/share/metainfo/ ${FLATPAK_ID}.appdata.xml",
+        "install -D -m0755 -t /app/bin/ apply_extra"
       ],
       "sources": [
         {
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "062034e26204939bc1c0ff0d5147078e868c618195a78e4634c28cf1ea63416e",
-          "size": 313121329,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2018.3.2.tar.gz"
+          "sha256": "5e0f630f4aba9e1cfa72d448638c3e4e16e9a6873953cf3f77bd3c190d6ca20c",
+          "size": 326450499,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2018.3.3.tar.gz"
         },
         {
           "type": "file",
@@ -68,22 +69,21 @@
         },
         {
           "type": "file",
-          "path": "com.jetbrains.DataGrip.svg"
+          "sha256": "f085988de080ad0b8f6b5834eed380deeca2eaffbf984dd1ee0836b08ddbc1b0",
+          "url": "https://resources.jetbrains.com/storage/products/datagrip/docs/datagrip_logos.zip"
         },
         {
           "type": "script",
           "commands": [
             "mkdir datagrip/",
-            "tar -zxf datagrip.tar.gz -C datagrip/ --strip-components=1",
+            "tar -zxf datagrip.tar.gz --directory=datagrip/ --strip-components=1",
             "rm -f datagrip.tar.gz"
           ],
           "dest-filename": "apply_extra"
         },
         {
           "type": "script",
-          "commands": [
-            "exec env TMPDIR=${XDG_CACHE_HOME}/tmp/ /app/extra/datagrip/bin/datagrip.sh \"$@\""
-          ],
+          "commands": ["exec env JAVA_TOOL_OPTIONS=-Djava.io.tmpdir=${XDG_CACHE_HOME}/tmp/ TMPDIR=${XDG_CACHE_HOME}/tmp/ /app/extra/datagrip/bin/datagrip.sh \"$@\""],
           "dest-filename": "datagrip.sh"
         }
       ]
