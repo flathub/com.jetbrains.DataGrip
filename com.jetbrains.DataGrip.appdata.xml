@@ -36,9 +36,10 @@
   <url type="bugtracker">https://youtrack.jetbrains.com/issues/DBE/</url>
   <url type="homepage">https://www.jetbrains.com/datagrip/</url>
   <developer_name>JetBrains s.r.o.</developer_name>
-  <update_contact>community-support@jetbrains.com</update_contact>
+  <update_contact>datagrip@jetbrains.com</update_contact>
   <content_rating type="oars-1.1" />
   <releases>
+    <release type="stable" date="2019-03-12" version="2018.3.4" />
     <release type="stable" date="2019-02-18" version="2018.3.3" />
     <release type="stable" date="2019-01-22" version="2018.3.2" />
     <release type="stable" date="2018-12-18" version="2018.3.1" />
