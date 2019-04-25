@@ -34,8 +34,8 @@
       "sources": [
         {
           "type": "archive",
-          "sha256": "047a15af3a0eaf3344c10f138fe21561052104abd05d18d85b438e1d002c5ac3",
-          "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.18.7/libsecret-0.18.7.tar.gz"
+          "sha256": "33ee5dfd3556931b81d47111890c8b9c51093b4ced18e0e87f51c1769e24d43c",
+          "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.18.8/libsecret-0.18.8.tar.gz"
         }
       ]
     },
@@ -55,9 +55,9 @@
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "9fd00efef6c099b8f2b0c6977877d95104960029b69a308a2c4ba230fb9b419c",
-          "size": 340787375,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.1.tar.gz"
+          "sha256": "cdabe87d0f4e16a5325d679385f32581832745e6cf5eb02a6e7db18d9656d070",
+          "size": 345527499,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.1.1.tar.gz"
         },
         {
           "type": "file",
