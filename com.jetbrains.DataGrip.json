@@ -11,6 +11,7 @@
     "--filesystem=home",
     "--share=ipc",
     "--share=network",
+    "--socket=wayland",
     "--socket=x11",
     "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.freedesktop.secrets"
@@ -27,7 +28,6 @@
       ],
       "config-opts": [
         "--disable-gtk-doc",
-        "--disable-introspection",
         "--disable-manpages",
         "--disable-static"
       ],
@@ -55,9 +55,9 @@
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "9c67659781ba43e96aac0c2ca32dc6919207da977bdf909122935f921863a704",
-          "size": 350754634,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.1.2.tar.gz"
+          "sha256": "789796893ebaa757982a05564b7ed6cd4e6305c8e61d43f1134702228907d76b",
+          "size": 353763620,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.1.3.tar.gz"
         },
         {
           "type": "file",
