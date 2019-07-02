@@ -24,6 +24,7 @@
         "/bin",
         "/include",
         "/lib/*.la",
+        "/lib/debug",
         "/lib/pkgconfig"
       ],
       "config-opts": [
@@ -38,8 +39,7 @@
           "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.18.8/libsecret-0.18.8.tar.gz"
         }
       ]
-    },
-    {
+    }, {
       "name": "datagrip",
       "buildsystem": "simple",
       "build-commands": [
@@ -55,24 +55,20 @@
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "789796893ebaa757982a05564b7ed6cd4e6305c8e61d43f1134702228907d76b",
-          "size": 353763620,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.1.3.tar.gz"
-        },
-        {
+          "sha256": "0b82decbe5975c95d532f57f12dc476d49ee54a9bfc6d7a3def3d9e7c2b14c7e",
+          "size": 368408133,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.1.4.tar.gz"
+        }, {
           "type": "file",
           "path": "com.jetbrains.DataGrip.appdata.xml"
-        },
-        {
+        }, {
           "type": "file",
           "path": "com.jetbrains.DataGrip.desktop"
-        },
-        {
+        }, {
           "type": "file",
           "sha256": "f085988de080ad0b8f6b5834eed380deeca2eaffbf984dd1ee0836b08ddbc1b0",
           "url": "https://resources.jetbrains.com/storage/products/datagrip/docs/datagrip_logos.zip"
-        },
-        {
+        }, {
           "type": "script",
           "commands": [
             "mkdir datagrip/",
@@ -80,8 +76,7 @@
             "rm -f datagrip.tar.gz"
           ],
           "dest-filename": "apply_extra"
-        },
-        {
+        }, {
           "type": "script",
           "commands": ["exec env JAVA_TOOL_OPTIONS=-Djava.io.tmpdir=${XDG_CACHE_HOME}/tmp/ TMPDIR=${XDG_CACHE_HOME}/tmp/ /app/extra/datagrip/bin/datagrip.sh \"$@\""],
           "dest-filename": "datagrip.sh"
