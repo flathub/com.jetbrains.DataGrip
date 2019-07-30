@@ -7,12 +7,13 @@
   "separate-locales": false,
   "finish-args": [
     "--device=dri",
-    "--env=DATAGRIP_JDK=/app/extra/datagrip/jre64/",
+    "--env=DATAGRIP_JDK=/app/extra/datagrip/jre64",
     "--filesystem=home",
     "--share=ipc",
     "--share=network",
     "--socket=wayland",
     "--socket=x11",
+    "--talk-name=org.freedesktop.Flatpak",
     "--talk-name=org.freedesktop.Notifications",
     "--talk-name=org.freedesktop.secrets"
   ],
@@ -55,9 +56,9 @@
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "0b82decbe5975c95d532f57f12dc476d49ee54a9bfc6d7a3def3d9e7c2b14c7e",
-          "size": 368408133,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.1.4.tar.gz"
+          "sha256": "54bd6d8095e25eab0e51989faf12146dd510874eb16481d489e379741a751957",
+          "size": 335780800,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.2.tar.gz"
         }, {
           "type": "file",
           "path": "com.jetbrains.DataGrip.appdata.xml"
@@ -78,7 +79,13 @@
           "dest-filename": "apply_extra"
         }, {
           "type": "script",
-          "commands": ["exec env JAVA_TOOL_OPTIONS=-Djava.io.tmpdir=${XDG_CACHE_HOME}/tmp/ TMPDIR=${XDG_CACHE_HOME}/tmp/ /app/extra/datagrip/bin/datagrip.sh \"$@\""],
+          "commands": [
+            "JAVA_TOOL_OPTIONS=-Djava.io.tmpdir=${XDG_CACHE_HOME}/tmp/",
+            "export JAVA_TOOL_OPTIONS",
+            "TMPDIR=${XDG_CACHE_HOME}/tmp/",
+            "export TMPDIR",
+            "exec env /app/extra/datagrip/bin/datagrip.sh \"$@\""
+          ],
           "dest-filename": "datagrip.sh"
         }
       ]
