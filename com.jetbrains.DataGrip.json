@@ -2,7 +2,7 @@
   "app-id": "com.jetbrains.DataGrip",
   "command": "datagrip",
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "18.08",
+  "runtime-version": "19.08",
   "sdk": "org.freedesktop.Sdk",
   "separate-locales": false,
   "finish-args": [
@@ -36,8 +36,8 @@
       "sources": [
         {
           "type": "archive",
-          "sha256": "33ee5dfd3556931b81d47111890c8b9c51093b4ced18e0e87f51c1769e24d43c",
-          "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.18.8/libsecret-0.18.8.tar.gz"
+          "sha256": "303c6e8cf3e12534e885b0682cd6130716c6834397b76d3829321b6d83b2389c",
+          "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.19.1/libsecret-0.19.1.tar.gz"
         }
       ]
     }, {
@@ -56,9 +56,9 @@
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "ec1a777c9d1a2ea56543954a0d48cecbb2b509523cff724db36371219c56f013",
-          "size": 350551317,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.2.3.tar.gz"
+          "sha256": "c128cc20a90f88598cdf075f432e2c40ce175ded188c22bc35f7cf90b7c3862a",
+          "size": 353348395,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.2.4.tar.gz"
         }, {
           "type": "file",
           "path": "com.jetbrains.DataGrip.appdata.xml"
