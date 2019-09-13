@@ -18,29 +18,7 @@
     "--talk-name=org.freedesktop.secrets"
   ],
   "modules": [
-    "shared-modules/gtk2/gtk2.json",
     {
-      "name": "libsecret",
-      "cleanup": [
-        "/bin",
-        "/include",
-        "/lib/*.la",
-        "/lib/debug",
-        "/lib/pkgconfig"
-      ],
-      "config-opts": [
-        "--disable-gtk-doc",
-        "--disable-manpages",
-        "--disable-static"
-      ],
-      "sources": [
-        {
-          "type": "archive",
-          "sha256": "303c6e8cf3e12534e885b0682cd6130716c6834397b76d3829321b6d83b2389c",
-          "url": "https://gitlab.gnome.org/GNOME/libsecret/-/archive/0.19.1/libsecret-0.19.1.tar.gz"
-        }
-      ]
-    }, {
       "name": "datagrip",
       "buildsystem": "simple",
       "build-commands": [
