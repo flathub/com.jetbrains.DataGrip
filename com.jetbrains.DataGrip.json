@@ -34,9 +34,9 @@
           "type": "extra-data",
           "filename": "datagrip.tar.gz",
           "only-arches": ["x86_64"],
-          "sha256": "c128cc20a90f88598cdf075f432e2c40ce175ded188c22bc35f7cf90b7c3862a",
-          "size": 353348395,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.2.4.tar.gz"
+          "sha256": "f7780ba87e732c9904db0dd5ba2a7f6340e1a8162f16214b61fb520519add9a1",
+          "size": 356008790,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.2.5.tar.gz"
         }, {
           "type": "file",
           "path": "com.jetbrains.DataGrip.appdata.xml"
