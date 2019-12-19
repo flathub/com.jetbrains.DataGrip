@@ -1,80 +1,88 @@
 {
-  "app-id": "com.jetbrains.DataGrip",
-  "command": "datagrip",
-  "runtime": "org.freedesktop.Platform",
-  "runtime-version": "19.08",
-  "sdk": "org.freedesktop.Sdk",
-  "separate-locales": false,
-  "finish-args": [
-    "--device=dri",
-    "--env=DATAGRIP_JDK=/app/extra/datagrip/jre64",
-    "--filesystem=home",
-    "--share=ipc",
-    "--share=network",
-    "--socket=wayland",
-    "--socket=x11",
-    "--talk-name=org.freedesktop.Flatpak",
-    "--talk-name=org.freedesktop.Notifications",
-    "--talk-name=org.freedesktop.secrets"
-  ],
-  "modules": [
-    {
-      "name": "libsecret",
-      "buildsystem": "meson",
-      "config-opts": [
-        "-Dgtk_doc=false",
-        "-Dmanpage=false",
-        "-Dvapi=false"
-      ],
-      "sources": [
+    "app-id": "com.jetbrains.DataGrip",
+    "command": "datagrip",
+    "runtime": "org.freedesktop.Platform",
+    "runtime-version": "19.08",
+    "sdk": "org.freedesktop.Sdk",
+    "separate-locales": false,
+    "finish-args": [
+        "--device=dri",
+        "--env=DATAGRIP_JDK=/app/extra/datagrip/jre64",
+        "--filesystem=home",
+        "--share=ipc",
+        "--share=network",
+        "--socket=wayland",
+        "--socket=x11",
+        "--talk-name=org.freedesktop.Flatpak",
+        "--talk-name=org.freedesktop.Notifications",
+        "--talk-name=org.freedesktop.secrets"
+    ],
+    "modules": [
         {
-          "type": "git",
-          "commit": "f576dfbe50f9aed22802ad0db0356d081f467d7a",
-          "tag": "0.19.1",
-          "url": "https://gitlab.gnome.org/GNOME/libsecret.git"
-        }
-      ]
-    }, {
-      "name": "datagrip",
-      "buildsystem": "simple",
-      "build-commands": [
-        "unzip datagrip_logos.zip",
-        "install -D --mode=0644 logo.svg /app/share/icons/hicolor/scalable/apps/com.jetbrains.DataGrip.svg",
-        "install -D --mode=0755 entrypoint.sh /app/bin/datagrip",
-        "install -D --mode=0644 --target-directory=/app/share/applications/ com.jetbrains.DataGrip.desktop",
-        "install -D --mode=0644 --target-directory=/app/share/metainfo/ com.jetbrains.DataGrip.appdata.xml",
-        "install -D --mode=0755 apply_extra.sh /app/bin/apply_extra"
-      ],
-      "sources": [
+            "name": "libsecret",
+            "buildsystem": "meson",
+            "config-opts": [
+                "-Dgtk_doc=false",
+                "-Dmanpage=false",
+                "-Dvapi=false"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "commit": "f576dfbe50f9aed22802ad0db0356d081f467d7a",
+                    "tag": "0.19.1",
+                    "url": "https://gitlab.gnome.org/GNOME/libsecret.git"
+                }
+            ]
+        },
         {
-          "type": "file",
-          "sha256": "f085988de080ad0b8f6b5834eed380deeca2eaffbf984dd1ee0836b08ddbc1b0",
-          "url": "https://resources.jetbrains.com/storage/products/datagrip/docs/datagrip_logos.zip"
-        }, {
-          "type": "file",
-          "path": "apply_extra.sh"
-        }, {
-          "type": "file",
-          "path": "entrypoint.sh"
-        }, {
-          "type": "file",
-          "path": "com.jetbrains.DataGrip.appdata.xml"
-        }, {
-          "type": "file",
-          "path": "com.jetbrains.DataGrip.desktop"
-        }, {
-          "type": "extra-data",
-          "filename": "datagrip.tar.gz",
-          "only-arches": ["x86_64"],
-          "sha256": "494a293e3fbd7a13d352d06a0e019475b5789c6060cf47fde89c05f711e9fb45",
-          "size": 362237801,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.3.tar.gz",
-          "x-checker-data": {
-            "type": "jetbrains",
-            "code": "DG"
-          }
+            "name": "datagrip",
+            "buildsystem": "simple",
+            "build-commands": [
+                "unzip datagrip_logos.zip",
+                "install -D --mode=0644 logo.svg /app/share/icons/hicolor/scalable/apps/com.jetbrains.DataGrip.svg",
+                "install -D --mode=0755 entrypoint.sh /app/bin/datagrip",
+                "install -D --mode=0644 --target-directory=/app/share/applications/ com.jetbrains.DataGrip.desktop",
+                "install -D --mode=0644 --target-directory=/app/share/metainfo/ com.jetbrains.DataGrip.appdata.xml",
+                "install -D --mode=0755 apply_extra.sh /app/bin/apply_extra"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "sha256": "f085988de080ad0b8f6b5834eed380deeca2eaffbf984dd1ee0836b08ddbc1b0",
+                    "url": "https://resources.jetbrains.com/storage/products/datagrip/docs/datagrip_logos.zip"
+                },
+                {
+                    "type": "file",
+                    "path": "apply_extra.sh"
+                },
+                {
+                    "type": "file",
+                    "path": "entrypoint.sh"
+                },
+                {
+                    "type": "file",
+                    "path": "com.jetbrains.DataGrip.appdata.xml"
+                },
+                {
+                    "type": "file",
+                    "path": "com.jetbrains.DataGrip.desktop"
+                },
+                {
+                    "type": "extra-data",
+                    "filename": "datagrip.tar.gz",
+                    "only-arches": [
+                        "x86_64"
+                    ],
+                    "sha256": "aae7090b2ee27c8ee9d8b9cbd70bdd64cdb08851de5621a2607d1661ba51fbc0",
+                    "size": 372125019,
+                    "url": "https://download.jetbrains.com/datagrip/datagrip-2019.3.1.tar.gz",
+                    "x-checker-data": {
+                        "type": "jetbrains",
+                        "code": "DG"
+                    }
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
