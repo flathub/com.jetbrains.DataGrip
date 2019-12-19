@@ -47,13 +47,6 @@
       ],
       "sources": [
         {
-          "type": "extra-data",
-          "filename": "datagrip.tar.gz",
-          "only-arches": ["x86_64"],
-          "sha256": "494a293e3fbd7a13d352d06a0e019475b5789c6060cf47fde89c05f711e9fb45",
-          "size": 362237801,
-          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.3.tar.gz"
-        }, {
           "type": "file",
           "sha256": "f085988de080ad0b8f6b5834eed380deeca2eaffbf984dd1ee0836b08ddbc1b0",
           "url": "https://resources.jetbrains.com/storage/products/datagrip/docs/datagrip_logos.zip"
@@ -69,6 +62,17 @@
         }, {
           "type": "file",
           "path": "com.jetbrains.DataGrip.desktop"
+        }, {
+          "type": "extra-data",
+          "filename": "datagrip.tar.gz",
+          "only-arches": ["x86_64"],
+          "sha256": "494a293e3fbd7a13d352d06a0e019475b5789c6060cf47fde89c05f711e9fb45",
+          "size": 362237801,
+          "url": "https://download.jetbrains.com/datagrip/datagrip-2019.3.tar.gz",
+          "x-checker-data": {
+            "type": "jetbrains",
+            "code": "DG"
+          }
         }
       ]
     }
