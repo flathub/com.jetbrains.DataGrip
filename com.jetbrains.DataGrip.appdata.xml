@@ -39,6 +39,7 @@
   <update_contact>datagrip@jetbrains.com</update_contact>
   <content_rating type="oars-1.1"/>
   <releases>
+    <release version="2019.3.2" date="2020-01-22"/>
     <release version="2019.3.1" date="2019-12-19"/>
     <release type="stable" date="2019-12-03" version="2019.3"/>
     <release type="stable" date="2019-10-31" version="2019.2.6"/>
