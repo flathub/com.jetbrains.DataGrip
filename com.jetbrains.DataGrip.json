@@ -58,9 +58,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "sha256": "e51fb986eab8d96b85b19a01b068189301dd4a46cd7575577feffd848bfed7ab",
-                    "size": 373960378,
-                    "url": "https://download.jetbrains.com/datagrip/datagrip-2019.3.2.tar.gz",
+                    "sha256": "307a298017cee716a6191a920170e8bdd68f895eba7eb5568998e1070c8f7e7d",
+                    "size": 374767627,
+                    "url": "https://download.jetbrains.com/datagrip/datagrip-2019.3.3.tar.gz",
                     "x-checker-data": {
                         "type": "jetbrains",
                         "code": "DG"
