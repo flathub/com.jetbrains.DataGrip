@@ -58,9 +58,9 @@
                     "only-arches": [
                         "x86_64"
                     ],
-                    "sha256": "3d7e8a65644773548b3c26ab83529f03a995d10326ab67e1aab68febd2d76afc",
-                    "size": 427363846,
-                    "url": "https://download.jetbrains.com/datagrip/datagrip-2020.1.tar.gz",
+                    "sha256": "788c099a0153ba51e180960f471dcbf1a013ea0330dc4b9f9c0fff0690a93f61",
+                    "size": 350098765,
+                    "url": "https://download.jetbrains.com/datagrip/datagrip-2020.1.1.tar.gz",
                     "x-checker-data": {
                         "type": "jetbrains",
                         "code": "DG"
