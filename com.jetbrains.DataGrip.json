@@ -15,7 +15,8 @@
         "--socket=x11",
         "--talk-name=org.freedesktop.Flatpak",
         "--talk-name=org.freedesktop.Notifications",
-        "--talk-name=org.freedesktop.secrets"
+        "--talk-name=org.freedesktop.secrets",
+        "--talk-name=com.canonical.AppMenu.Registrar"
     ],
     "modules": [
         "shared-modules/libsecret/libsecret.json",
