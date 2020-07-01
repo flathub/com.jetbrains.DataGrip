@@ -24,7 +24,7 @@
             "buildsystem": "simple",
             "build-commands": [
                 "unzip datagrip_logos.zip",
-                "install -D --mode=0644 logo.svg /app/share/icons/hicolor/scalable/apps/com.jetbrains.DataGrip.svg",
+                "install -D --mode=0644 datagrip_logos/icon-datagrip.svg /app/share/icons/hicolor/scalable/apps/com.jetbrains.DataGrip.svg",
                 "install -D --mode=0755 entrypoint.sh /app/bin/datagrip",
                 "install -D --mode=0644 --target-directory=/app/share/applications/ com.jetbrains.DataGrip.desktop",
                 "install -D --mode=0644 --target-directory=/app/share/metainfo/ com.jetbrains.DataGrip.metainfo.xml",
@@ -34,8 +34,8 @@
                 {
                     "type": "file",
                     "sha256": "e118b59440e6b2b48ffb361429cbf908fa40aff3c914b99da51b3b4d4d173016",
-                    "url": "https://resources.jetbrains.com/storage/products/datagrip/docs/datagrip_logos.zip",
-                    "size": 1062881
+                    "size": 1062881,
+                    "url": "https://resources.jetbrains.com/storage/products/datagrip/docs/datagrip_logos.zip"
                 },
                 {
                     "type": "file",
