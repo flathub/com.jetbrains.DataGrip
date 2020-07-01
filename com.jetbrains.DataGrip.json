@@ -34,8 +34,9 @@
             "sources": [
                 {
                     "type": "file",
-                    "sha256": "f085988de080ad0b8f6b5834eed380deeca2eaffbf984dd1ee0836b08ddbc1b0",
-                    "url": "https://resources.jetbrains.com/storage/products/datagrip/docs/datagrip_logos.zip"
+                    "sha256": "e118b59440e6b2b48ffb361429cbf908fa40aff3c914b99da51b3b4d4d173016",
+                    "url": "https://resources.jetbrains.com/storage/products/datagrip/docs/datagrip_logos.zip",
+                    "size": 1062881
                 },
                 {
                     "type": "file",
