@@ -1,8 +1,7 @@
----
 app-id: com.jetbrains.DataGrip
 command: datagrip
 runtime: org.freedesktop.Platform
-runtime-version: "20.08"
+runtime-version: '20.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 finish-args:
@@ -33,9 +32,9 @@ modules:
         filename: datagrip.tar.gz
         only-arches:
           - x86_64
-        sha256: 6b9e9e33475e1b53369c5f0ef41a89b4ef5c937cb09926197168e2755bfd6147
-        size: 386608216
-        url: https://download.jetbrains.com/datagrip/datagrip-2020.2.3.tar.gz
+        sha256: 4df45a52ed0de13178a21e96340c7fe5c10e0b04b1a62ee2d5152088a3a615c8
+        size: 443012748
+        url: https://download.jetbrains.com/datagrip/datagrip-2020.3.tar.gz
         x-checker-data:
           code: DG
           type: jetbrains
