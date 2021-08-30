@@ -21,8 +21,7 @@ modules:
   - name: datagrip
     buildsystem: simple
     build-commands:
-      - unzip datagrip_logos.zip
-      - install -D --mode=0644 datagrip_logos/icon-datagrip.svg /app/share/icons/hicolor/scalable/apps/com.jetbrains.DataGrip.svg
+      - install -D --mode=0644 datagrip-icon.svg /app/share/icons/hicolor/scalable/apps/com.jetbrains.DataGrip.svg
       - install -D --mode=0755 entrypoint.sh /app/bin/datagrip
       - install -D --mode=0644 --target-directory=/app/share/applications/ com.jetbrains.DataGrip.desktop
       - install -D --mode=0644 --target-directory=/app/share/metainfo/ com.jetbrains.DataGrip.metainfo.xml
@@ -39,10 +38,6 @@ modules:
           code: DG
           type: jetbrains
       - type: file
-        sha256: e118b59440e6b2b48ffb361429cbf908fa40aff3c914b99da51b3b4d4d173016
-        size: 1062881
-        url: https://resources.jetbrains.com/storage/products/datagrip/docs/datagrip_logos.zip
-      - type: file
         path: apply_extra.sh
       - type: file
         path: com.jetbrains.DataGrip.desktop
@@ -50,3 +45,8 @@ modules:
         path: com.jetbrains.DataGrip.metainfo.xml
       - type: file
         path: entrypoint.sh
+      - type: file # https://www.jetbrains.com/company/brand/#logos-and-icons
+        dest-filename: datagrip-icon.svg
+        sha256: 47e2bd0ae3e1d3906effc0ca2de1320725714e5672b012d2458d43e45e8ae9f4
+        size: 2271
+        url: https://resources.jetbrains.com/storage/products/company/brand/logos/DataGrip_icon.svg
