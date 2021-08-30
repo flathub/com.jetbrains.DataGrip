@@ -15,7 +15,7 @@ Assuming `flatpak`, `flatpak-builder`, and `git` are installed, then execute the
 $ git clone https://github.com/flathub/com.jetbrains.DataGrip.git
 $ cd com.jetbrains.DataGrip/
 $ flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-$ flatpak-builder build --force-clean --install-deps-from=flathub --install --user com.jetbrains.DataGrip.yml
+$ flatpak-builder build --force-clean --install-deps-from=flathub --install --user com.jetbrains.DataGrip.yaml
 
 # ...to uninstall the artifact
 $ flatpak uninstall --delete-data --user com.jetbrains.DataGrip
@@ -25,3 +25,6 @@ $ rm --force --recursive .flatpak-builder/ build/
 $ flatpak uninstall --unused --user
 $ flatpak remote-delete --user flathub
 ----
+
+// git submodule update --init --recursive
+// git submodule foreach git pull origin master
