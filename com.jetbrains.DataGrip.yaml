@@ -31,9 +31,9 @@ modules:
         filename: datagrip.tar.gz
         only-arches:
           - x86_64
-        sha256: 55b28f3b79eda126fe778e2945804d50b1145503737f1b5e25ab6ae2d2a0e3ae
-        size: 522510362
-        url: https://download.jetbrains.com/datagrip/datagrip-2022.2.5.tar.gz
+        sha256: 493a3614ba4f497f49c344c18004f7600bfbbc6c888242fecdcfcb0a2c1ebc74
+        size: 564596761
+        url: https://download.jetbrains.com/datagrip/datagrip-2022.3.tar.gz
         x-checker-data:
           code: DG
           type: jetbrains
