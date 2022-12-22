@@ -9,7 +9,7 @@ finish-args:
   - "--filesystem=home"
   - "--share=ipc"
   - "--share=network"
-  - "--socket=fallback-x11"
+  - "--socket=x11"
   - "--socket=wayland"
   - "--talk-name=com.canonical.AppMenu.Registrar"
   - "--talk-name=org.freedesktop.Flatpak"
