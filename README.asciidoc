@@ -1,14 +1,14 @@
 = JetBrains DataGrip
 :uri-datagrip-home: https://www.jetbrains.com/datagrip/
 
-{uri-datagrip-home}[DataGrip^] is the multi-engine database environment. We support MySQL, PostgreSQL, Microsoft SQL
-Server, Microsoft Azure, Oracle, Amazon Redshift, Sybase, DB2, SQLite, HyperSQL, Apache Derby and H2. If a DBMS has a
-JDBC driver you can connect to it via DataGrip. For any of supported engines it provides database introspection and
-various instruments for creating and modifying objects.
+{uri-datagrip-home}[DataGrip^] is the multi-engine database environment.
+We support MySQL, PostgreSQL, Microsoft SQL Server, Microsoft Azure, Oracle, Amazon Redshift, Sybase, DB2, SQLite, HyperSQL, Apache Derby and H2.
+If a DBMS has a JDBC driver you can connect to it via DataGrip.
+For any of supported engines it provides database introspection and various instruments for creating and modifying objects.
 
 == Build, Install and Run Flatpak (locally)
 
-Assuming `flatpak`, `flatpak-builder`, and `git` are installed, then execute the following commands:
+Assuming `flatpak`, `flatpak-builder`, and `git` are installed, execute the following commands:
 
 [source,shell]
 ----
