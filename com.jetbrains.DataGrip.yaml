@@ -5,16 +5,16 @@ runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 finish-args:
-  - --device=dri
-  - --filesystem=home
-  - --share=ipc
-  - --share=network
-  - --socket=wayland
-  - --socket=x11
-  - --talk-name=com.canonical.AppMenu.Registrar
-  - --talk-name=org.freedesktop.Flatpak
-  - --talk-name=org.freedesktop.Notifications
-  - --talk-name=org.freedesktop.secrets
+  - "--device=dri"
+  - "--filesystem=home"
+  - "--share=ipc"
+  - "--share=network"
+  - "--socket=fallback-x11"
+  - "--socket=wayland"
+  - "--talk-name=com.canonical.AppMenu.Registrar"
+  - "--talk-name=org.freedesktop.Flatpak"
+  - "--talk-name=org.freedesktop.Notifications"
+  - "--talk-name=org.freedesktop.secrets"
 modules:
   - shared-modules/libsecret/libsecret.json
 
