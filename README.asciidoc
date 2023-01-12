@@ -8,9 +8,9 @@ For any of supported engines it provides database introspection and various inst
 
 == Build, Install and Run Flatpak (locally)
 
-Assuming `flatpak`, `flatpak-builder`, and `git` are installed, execute the following commands:
+Assuming `flatpak`, `flatpak-builder`, and `git` packages are installed, execute the following commands:
 
-[source,shell]
+[source,shellscript]
 ----
 $ git clone https://github.com/flathub/com.jetbrains.DataGrip.git
 $ cd com.jetbrains.DataGrip/
