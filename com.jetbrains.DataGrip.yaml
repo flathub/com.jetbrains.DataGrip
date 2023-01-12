@@ -5,16 +5,16 @@ runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 finish-args:
-  - "--device=dri"
-  - "--filesystem=home"
-  - "--share=ipc"
-  - "--share=network"
-  - "--socket=x11"
-  - "--socket=wayland"
-  - "--talk-name=com.canonical.AppMenu.Registrar"
-  - "--talk-name=org.freedesktop.Flatpak"
-  - "--talk-name=org.freedesktop.Notifications"
-  - "--talk-name=org.freedesktop.secrets"
+  - --device=dri
+  - --filesystem=home
+  - --share=ipc
+  - --share=network
+  - --socket=x11
+  - --socket=wayland
+  - --talk-name=com.canonical.AppMenu.Registrar
+  - --talk-name=org.freedesktop.Flatpak
+  - --talk-name=org.freedesktop.Notifications
+  - --talk-name=org.freedesktop.secrets
 modules:
   - shared-modules/libsecret/libsecret.json
 
@@ -31,9 +31,9 @@ modules:
         filename: datagrip.tar.gz
         only-arches:
           - x86_64
-        sha256: e542111e490fbbc80d3aebcbbc343b29e17bf6766d7b708675618d8e49b6ee83
-        size: 567161673
-        url: https://download.jetbrains.com/datagrip/datagrip-2022.3.2.tar.gz
+        sha256: a5575ff7e80dd4e9390eb64fc54ed4a924403950da0c38da548de3c4bd97b34b
+        size: 569259324
+        url: https://download.jetbrains.com/datagrip/datagrip-2022.3.3.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
