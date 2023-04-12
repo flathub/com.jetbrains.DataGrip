@@ -72,6 +72,12 @@ modules:
         sha256: cd12a064013ed18e2ee8475e669b9f58db1b225a0144debdb85a68cecddba57f
         url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.1.1.tar.bz2
 
+  - name: zypak
+    sources:
+      - type: git
+        tag: v2022.04
+        url: https://github.com/refi64/zypak
+
   - name: datagrip
     buildsystem: simple
     build-commands:
@@ -105,11 +111,7 @@ modules:
         sha256: 47e2bd0ae3e1d3906effc0ca2de1320725714e5672b012d2458d43e45e8ae9f4
         size: 2271
         url: https://resources.jetbrains.com/storage/products/company/brand/logos/DataGrip_icon.svg
-  - name: zypak
-    sources:
-      - type: git
-        url: https://github.com/refi64/zypak
-        tag: v2022.04
+
 runtime: org.freedesktop.Sdk
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk
