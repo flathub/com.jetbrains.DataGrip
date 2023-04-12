@@ -105,6 +105,11 @@ modules:
         sha256: 47e2bd0ae3e1d3906effc0ca2de1320725714e5672b012d2458d43e45e8ae9f4
         size: 2271
         url: https://resources.jetbrains.com/storage/products/company/brand/logos/DataGrip_icon.svg
+  - name: zypak
+    sources:
+      - type: git
+        url: https://github.com/refi64/zypak
+        tag: v2022.04
 runtime: org.freedesktop.Sdk
 runtime-version: '22.08'
 sdk: org.freedesktop.Sdk

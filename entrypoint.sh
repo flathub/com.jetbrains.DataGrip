@@ -7,4 +7,4 @@ export DATAGRIP_JDK
 TMPDIR="${XDG_RUNTIME_DIR}/app/${FLATPAK_ID}"
 export TMPDIR
 
-exec env /app/extra/datagrip/bin/datagrip.sh "$@"
+exec env zypak-wrapper /app/extra/datagrip/bin/datagrip.sh "$@"
