@@ -17,6 +17,7 @@ finish-args:
   - --talk-name=org.gnome.keyring.SystemPrompter
 modules:
   - shared-modules/libsecret/libsecret.json
+
   - name: gcr
     cleanup:
       - /include
