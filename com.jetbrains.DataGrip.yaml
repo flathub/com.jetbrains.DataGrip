@@ -1,9 +1,10 @@
 app-id: com.jetbrains.DataGrip
 command: datagrip
 finish-args:
+  - --allow=devel
   - --device=dri
-  - --filesystem=host
   - --filesystem=xdg-run/gnupg:ro
+  - --filesystem=host
   - --filesystem=xdg-run/keyring
   - --share=ipc
   - --share=network
@@ -16,7 +17,6 @@ finish-args:
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.gnome.keyring.SystemPrompter
 modules:
-  - shared-modules/libsecret/libsecret.json
   - name: gcr
     cleanup:
       - /include
@@ -41,6 +41,8 @@ modules:
       - type: archive
         sha256: 29df50974a90987af694c0fb8926a6b366e68cacd8abd813817cfe1eb5d54524
         url: https://download.gnome.org/sources/gcr/3.34/gcr-3.34.0.tar.xz
+
+  - shared-modules/libsecret/libsecret.json
 
   - name: openssh
     buildsystem: simple
@@ -72,12 +74,6 @@ modules:
         sha256: cd12a064013ed18e2ee8475e669b9f58db1b225a0144debdb85a68cecddba57f
         url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.1.1.tar.bz2
 
-  - name: zypak
-    sources:
-      - type: git
-        tag: v2022.04
-        url: https://github.com/refi64/zypak
-
   - name: datagrip
     buildsystem: simple
     build-commands:
@@ -104,13 +100,15 @@ modules:
         path: com.jetbrains.DataGrip.desktop
       - type: file
         path: com.jetbrains.DataGrip.metainfo.xml
-      - type: file
-        path: entrypoint.sh
       - type: file # https://www.jetbrains.com/company/brand/#logos-and-icons
         dest-filename: datagrip-icon.svg
         sha256: 47e2bd0ae3e1d3906effc0ca2de1320725714e5672b012d2458d43e45e8ae9f4
         size: 2271
         url: https://resources.jetbrains.com/storage/products/company/brand/logos/DataGrip_icon.svg
+      - type: file
+        path: entrypoint.sh
+      - type: file
+        path: idea.properties
 
 runtime: org.freedesktop.Sdk
 runtime-version: '22.08'
