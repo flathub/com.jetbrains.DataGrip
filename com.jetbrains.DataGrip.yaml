@@ -82,6 +82,7 @@ modules:
       - install -D --mode=0644 --target-directory=/app/share/applications/ com.jetbrains.DataGrip.desktop
       - install -D --mode=0644 --target-directory=/app/share/metainfo/ com.jetbrains.DataGrip.metainfo.xml
       - install -D --mode=0755 apply_extra.sh /app/bin/apply_extra
+      - tee <idea.properties --append ${FLATPAK_DEST}/bin/idea.properties
     sources:
       - type: extra-data
         filename: datagrip.tar.gz
