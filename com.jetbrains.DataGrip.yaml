@@ -81,7 +81,8 @@ modules:
       - install -D --mode=0755 apply_extra.sh /app/bin/apply_extra
       - install -D --mode=0644 --target-directory=/app/share/applications/ com.jetbrains.DataGrip.desktop
       - install -D --mode=0644 --target-directory=/app/share/metainfo/ com.jetbrains.DataGrip.metainfo.xml
-      - install -D --mode=0644 --target-directory=/app/share/icons/hicolor/scalable/apps/ com.jetbrains.DataGrip.svg
+      - install -D --mode=0644 --target-directory=/app/share/icons/hicolor/scalable/apps/
+        com.jetbrains.DataGrip.svg
       - install -D --mode=0755 entrypoint.sh /app/bin/datagrip
       - install -D --mode=0644 --target-directory=/app/bin/ idea.properties
     sources:
@@ -89,9 +90,9 @@ modules:
         filename: datagrip.tar.gz
         only-arches:
           - x86_64
-        sha256: 9f1d9bd64352ade881343bd2d0cae63a4f5e9479e1bf822b4ab5f674fc0a8697
-        size: 566350351
-        url: https://download.jetbrains.com/datagrip/datagrip-2023.1.1.tar.gz
+        sha256: 57e8a79d69d9f34957fe7fa1307296396ab7c2b84bacffb6d86616cbcd596edd
+        size: 568353216
+        url: https://download.jetbrains.com/datagrip/datagrip-2023.1.2.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
