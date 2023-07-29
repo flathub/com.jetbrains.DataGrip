@@ -97,6 +97,17 @@ modules:
           code: DG
           is-main-source: true
           type: jetbrains
+      - type: extra-data
+        filename: datagrip.tar.gz
+        only-arches:
+          - aarch64
+        sha256: 65c01cc877bb2f9162520fe190560ef3b88dcc171e76c03f0c83206b4938f066
+        size: 570768510
+        url: https://download.jetbrains.com/datagrip/datagrip-2023.2-aarch64.tar.gz
+        x-checker-data:
+          code: DG
+          is-main-source: true
+          type: jetbrains
       - type: file
         path: apply_extra.sh
       - type: file
