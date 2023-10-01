@@ -1,5 +1,7 @@
 app-id: com.jetbrains.DataGrip
+
 command: datagrip
+
 finish-args:
   - --allow=devel
   - --device=dri
@@ -14,9 +16,9 @@ finish-args:
   - --socket=x11
   - --talk-name=com.canonical.AppMenu.Registrar
   - --talk-name=org.freedesktop.Flatpak
-  - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.gnome.keyring.SystemPrompter
+
 modules:
   - name: datagrip
     build-commands:
@@ -67,29 +69,26 @@ modules:
         path: idea.properties
 
   - name: gcr
+    buildsystem: meson
     cleanup:
       - /include
-      - /lib/debug
-      - /lib/girepository-1.0
       - /lib/pkgconfig
       - /man
-      - /share/gir-1.0
+      - /share/aclocal
       - /share/gtk-doc
-      - /share/doc
+      - /share/info
       - /share/man
       - /share/pkgconfig
       - '*.a'
       - '*.la'
     config-opts:
-      - --disable-schemas-compile
-      - --disable-static
-      - --disable-update-mime
-      - --disable-vala
-      - --enable-valgrind=no
+      - -Dgtk_doc=false
+      - -Dintrospection=false
+      - -Dvapi=false
     sources:
       - type: archive
-        sha256: 29df50974a90987af694c0fb8926a6b366e68cacd8abd813817cfe1eb5d54524
-        url: https://download.gnome.org/sources/gcr/3.34/gcr-3.34.0.tar.xz
+        sha256: 9ceaad29284ba919b9216e2888c18ec67240c2c93b3a4856bc5488bbc1f3a383
+        url: https://download.gnome.org/sources/gcr/4.1/gcr-4.1.0.tar.xz
 
   - shared-modules/libsecret/libsecret.json
 
@@ -124,6 +123,9 @@ modules:
         url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.1.1.tar.bz2
 
 runtime: org.freedesktop.Sdk
+
 runtime-version: '23.08'
+
 sdk: org.freedesktop.Sdk
+
 separate-locales: false
