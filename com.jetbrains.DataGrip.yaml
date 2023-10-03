@@ -1,5 +1,7 @@
 app-id: com.jetbrains.DataGrip
+
 command: datagrip
+
 finish-args:
   - --allow=devel
   - --device=dri
@@ -14,57 +16,13 @@ finish-args:
   - --socket=x11
   - --talk-name=com.canonical.AppMenu.Registrar
   - --talk-name=org.freedesktop.Flatpak
-  - --talk-name=org.freedesktop.Notifications
   - --talk-name=org.freedesktop.secrets
   - --talk-name=org.gnome.keyring.SystemPrompter
+
 modules:
-  - name: datagrip
-    build-commands:
-      - install -D --mode=0755 apply_extra.sh /app/bin/apply_extra
-      - install -D --mode=0644 --target-directory=/app/share/applications/ ${FLATPAK_ID}.desktop
-      - install -D --mode=0644 --target-directory=/app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
-      - install -D --mode=0644 --target-directory=/app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
-      - install -D --mode=0755 entrypoint.sh /app/bin/datagrip
-      - install -D --mode=0644 --target-directory=/app/bin/ idea.properties
-    buildsystem: simple
-    sources:
-      - type: extra-data
-        filename: datagrip.tar.gz
-        only-arches:
-          - x86_64
-        sha256: 0b20f0dc61d8fd9b42962d4931c64742dd17e3f008dfec2c8863a56b1bc4be9b
-        size: 569965177
-        url: https://download.jetbrains.com/datagrip/datagrip-2023.2.1.tar.gz
-        x-checker-data:
-          code: DG
-          is-main-source: true
-          type: jetbrains
-      - type: extra-data
-        filename: datagrip.tar.gz
-        only-arches:
-          - aarch64
-        sha256: adb22ffd83de5aa1cdceeb5f703137b1f66244695df9d8dcd9d4391fe8431c9e
-        size: 571311947
-        url: https://download.jetbrains.com/datagrip/datagrip-2023.2.1-aarch64.tar.gz
-        x-checker-data:
-          code: DG
-          is-main-source: true
-          type: jetbrains
-      - type: file
-        path: apply_extra.sh
-      - type: file
-        path: com.jetbrains.DataGrip.desktop
-      - type: file
-        path: com.jetbrains.DataGrip.metainfo.xml
-      - type: file # https://www.jetbrains.com/company/brand/#logos-and-icons
-        dest-filename: com.jetbrains.DataGrip.svg
-        sha256: 47e2bd0ae3e1d3906effc0ca2de1320725714e5672b012d2458d43e45e8ae9f4
-        size: 2271
-        url: https://resources.jetbrains.com/storage/products/company/brand/logos/DataGrip_icon.svg
-      - type: file
-        path: entrypoint.sh
-      - type: file
-        path: idea.properties
+  # -----------------------------------------------------------------------------------------------
+  #   D E P E N D E N C I E S
+  # -----------------------------------------------------------------------------------------------
 
   - name: gcr
     cleanup:
@@ -90,6 +48,17 @@ modules:
       - type: archive
         sha256: 29df50974a90987af694c0fb8926a6b366e68cacd8abd813817cfe1eb5d54524
         url: https://download.gnome.org/sources/gcr/3.34/gcr-3.34.0.tar.xz
+
+  - name: jetbrains-flatpak-wrapper
+    buildsystem: meson
+    config-opts:
+      - -Deditor_binary=/app/extra/datagrip/bin/datagrip.sh
+      - -Deditor_title=DataGrip
+      - -Dprogram_name=datagrip
+    sources:
+      - type: git
+        commit: 5a054811ab2144ceaf343169b240a70eeb4dfb47
+        url: https://github.com/Lctrs/jetbrains-flatpak-wrapper.git
 
   - shared-modules/libsecret/libsecret.json
 
@@ -123,7 +92,59 @@ modules:
         sha256: cd12a064013ed18e2ee8475e669b9f58db1b225a0144debdb85a68cecddba57f
         url: https://www.gnupg.org/ftp/gcrypt/pinentry/pinentry-1.1.1.tar.bz2
 
+  # -----------------------------------------------------------------------------------------------
+  #
+  # -----------------------------------------------------------------------------------------------
+
+  - name: datagrip
+    build-commands:
+      - install -D --mode 0644 --target-directory /app/bin/ idea.properties
+      - install -D --mode 0644 --target-directory /app/share/applications/ ${FLATPAK_ID}.desktop
+      - install -D --mode 0644 --target-directory /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
+      - install -D --mode 0644 --target-directory /app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
+      - install -D --mode 0755 apply_extra.sh /app/bin/apply_extra
+    buildsystem: simple
+    sources:
+      - type: extra-data
+        filename: datagrip.tar.gz
+        only-arches:
+          - aarch64
+        sha256: adb22ffd83de5aa1cdceeb5f703137b1f66244695df9d8dcd9d4391fe8431c9e
+        size: 571311947
+        url: https://download.jetbrains.com/datagrip/datagrip-2023.2.1-aarch64.tar.gz
+        x-checker-data:
+          code: DG
+          is-main-source: true
+          type: jetbrains
+      - type: extra-data
+        filename: datagrip.tar.gz
+        only-arches:
+          - x86_64
+        sha256: 0b20f0dc61d8fd9b42962d4931c64742dd17e3f008dfec2c8863a56b1bc4be9b
+        size: 569965177
+        url: https://download.jetbrains.com/datagrip/datagrip-2023.2.1.tar.gz
+        x-checker-data:
+          code: DG
+          is-main-source: true
+          type: jetbrains
+      - type: file
+        path: apply_extra.sh
+      - type: file
+        path: com.jetbrains.DataGrip.desktop
+      - type: file
+        path: com.jetbrains.DataGrip.metainfo.xml
+      - type: file # https://www.jetbrains.com/company/brand/#logos-and-icons
+        dest-filename: com.jetbrains.DataGrip.svg
+        sha256: 47e2bd0ae3e1d3906effc0ca2de1320725714e5672b012d2458d43e45e8ae9f4
+        size: 2271
+        url: https://resources.jetbrains.com/storage/products/company/brand/logos/DataGrip_icon.svg
+      - type: file
+        path: idea.properties
+
 runtime: org.freedesktop.Sdk
+
 runtime-version: '23.08'
+
 sdk: org.freedesktop.Sdk
+
 separate-locales: false
