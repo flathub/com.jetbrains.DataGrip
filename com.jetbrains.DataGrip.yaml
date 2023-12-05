@@ -68,6 +68,7 @@ modules:
     config-opts:
       - --disable-doc
       - --disable-fallback-curses
+      - --disable-libsecret
       - --disable-ncurses
       - --disable-pinentry-curses
       - --disable-pinentry-emacs
@@ -77,7 +78,6 @@ modules:
       - --disable-pinentry-qt5
       - --disable-pinentry-tqt
       - --disable-pinentry-tty
-      - --enable-libsecret=no
       - --enable-pinentry-gnome3
       - --without-libcap
     sources:
@@ -134,7 +134,7 @@ modules:
       - type: file
         path: idea.properties
 
-runtime: org.gnome.Platform
+runtime: org.gnome.Sdk
 
 runtime-version: '45'
 
