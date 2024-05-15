@@ -135,7 +135,7 @@ modules:
         path: com.jetbrains.DataGrip.metainfo.xml
       - type: file # https://www.jetbrains.com/company/brand/#logos-and-icons
         dest-filename: com.jetbrains.DataGrip.svg
-        sha256: 47e2bd0ae3e1d3906effc0ca2de1320725714e5672b012d2458d43e45e8ae9f4
+        sha256: 3945f10efffe676fdd9bae8dab402ea0787697a3430cb6893834a268c84bd8da
         size: 2271
         url: https://resources.jetbrains.com/storage/products/company/brand/logos/DataGrip_icon.svg
       - type: file
