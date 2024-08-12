@@ -109,9 +109,9 @@ modules:
         filename: datagrip.tar.gz
         only-arches:
           - aarch64
-        sha256: a0665f59cb30af3061dcc687ffc932d6a38ffaf26241d9d4c104eb5ebb6c96cc
-        size: 760395931
-        url: https://download.jetbrains.com/datagrip/datagrip-2024.1.5-aarch64.tar.gz
+        sha256: 3370392201465f1c6b9146110e1ba466e2666e39d649f1b75576a4fb2cd9cd8a
+        size: 939106552
+        url: https://download.jetbrains.com/datagrip/datagrip-2024.2-aarch64.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
@@ -120,9 +120,9 @@ modules:
         filename: datagrip.tar.gz
         only-arches:
           - x86_64
-        sha256: b7735ff82224b136be3284686e0d4308bf5f02c2aebb34004c990b5a38c66e50
-        size: 760666811
-        url: https://download.jetbrains.com/datagrip/datagrip-2024.1.5.tar.gz
+        sha256: 7d55714f8e3afe3b3f6c7d34fd94ca6436917dcce771ac97e951f6c5eeb6a3f5
+        size: 939671862
+        url: https://download.jetbrains.com/datagrip/datagrip-2024.2.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
