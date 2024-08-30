@@ -39,8 +39,11 @@
   <update_contact>datagrip@jetbrains.com</update_contact>
   <content_rating type="oars-1.1"/>
   <releases>
-    <release version="2024.1.5" date="2024-08-09">
+    <release version="2024.2.2" date="2024-08-23">
       <description></description>
+    </release>
+    <release version="2024.1.5" date="2024-08-09">
+      <description/>
     </release>
     <release version="2024.1.4" date="2024-06-10">
       <description/>
