@@ -19,7 +19,7 @@ modules:
   - name: jetbrains-flatpak-wrapper
     buildsystem: meson
     config-opts:
-      - -Deditor_binary=/app/extra/datagrip/bin/datagrip.sh
+      - -Deditor_binary=/app/extra/DG/bin/datagrip.sh
       - -Deditor_title=DataGrip
       - -Dprogram_name=datagrip
     sources:
@@ -61,8 +61,6 @@ modules:
           is-main-source: true
           type: jetbrains
       - type: file
-        path: apply_extra.sh
-      - type: file
         path: com.jetbrains.DataGrip.desktop
       - type: file
         path: com.jetbrains.DataGrip.metainfo.xml
@@ -73,6 +71,12 @@ modules:
         url: https://resources.jetbrains.com/storage/products/company/brand/logos/DataGrip_icon.svg
       - type: file
         path: idea.properties
+      - type: script
+        commands:
+          - install --directory --mode 0755 DG/
+          - tar --directory DG/ --extract --file datagrip.tar.gz --gunzip --strip-components 1
+          - rm --force datagrip.tar.gz
+        dest-filename: apply_extra.sh
 runtime: org.freedesktop.Sdk
 runtime-version: "24.08"
 sdk: org.freedesktop.Sdk
