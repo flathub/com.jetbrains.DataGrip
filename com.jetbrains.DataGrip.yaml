@@ -45,7 +45,7 @@ modules:
   - name: jetbrains-flatpak-wrapper
     buildsystem: meson
     config-opts:
-      - -Deditor_binary=/app/extra/DG/bin/datagrip.sh
+      - -Deditor_binary=/app/extra/DG/bin/datagrip
       - -Deditor_title=DataGrip
       - -Dprogram_name=datagrip
     sources:
