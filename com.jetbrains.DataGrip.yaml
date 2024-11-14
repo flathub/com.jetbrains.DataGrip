@@ -68,9 +68,9 @@ modules:
         filename: datagrip.tar.gz
         only-arches:
           - aarch64
-        sha256: 1d915eb7426693fe490cfcd5b484f0e1c9d45c21a4050242101dbe33905a42ee
-        size: 833240889
-        url: https://download.jetbrains.com/datagrip/datagrip-2024.2.2-aarch64.tar.gz
+        sha256: 0f923e16f78dda2f86a72921ae9c2ae361950208e32b882a76b7aa3cf560ed6e
+        size: 929905628
+        url: https://download.jetbrains.com/datagrip/datagrip-2024.3-aarch64.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
@@ -79,9 +79,9 @@ modules:
         filename: datagrip.tar.gz
         only-arches:
           - x86_64
-        sha256: 989599d5f2c900219d3cac75557655927f0b2f95224c9cf3b1ec9ba3167bfc07
-        size: 833803949
-        url: https://download.jetbrains.com/datagrip/datagrip-2024.2.2.tar.gz
+        sha256: 22bce5430534136dc5e63f9e38007f85d2e06b8e96ca42f2403d205dcc171caf
+        size: 929783287
+        url: https://download.jetbrains.com/datagrip/datagrip-2024.3.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
@@ -104,7 +104,7 @@ modules:
           - rm --force datagrip.tar.gz
         dest-filename: apply_extra.sh
 runtime: org.freedesktop.Sdk
-runtime-version: "24.08"
+runtime-version: '24.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:
