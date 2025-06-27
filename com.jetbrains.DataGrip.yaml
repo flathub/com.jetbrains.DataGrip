@@ -24,8 +24,8 @@ modules:
       - type: archive
         only-arches:
           - x86_64
-        sha256: 2138d2e405a12f1a088272e06790b76699b79cb90d0317b77aafaf35de908d76
-        url: https://github.com/git-lfs/git-lfs/releases/download/v3.6.1/git-lfs-linux-amd64-v3.6.1.tar.gz
+        sha256: e7ebba491af8a54e560be3a00666fa97e4cf2bbbb223178a0934b8ef74cf9bed
+        url: https://github.com/git-lfs/git-lfs/releases/download/v3.7.0/git-lfs-linux-amd64-v3.7.0.tar.gz
         x-checker-data:
           project-id: 11551
           stable-only: true
@@ -34,8 +34,8 @@ modules:
       - type: archive
         only-arches:
           - aarch64
-        sha256: 1c2720ff53528fbe769633d448d830aa7b682141e3c4f6a9f26b9cf3b2548d0a
-        url: https://github.com/git-lfs/git-lfs/releases/download/v3.6.1/git-lfs-linux-arm64-v3.6.1.tar.gz
+        sha256: 88c24cb0c772cb6570e70f336ef4bb7b6539c5fb9ebeda563e9a5458ca82a98e
+        url: https://github.com/git-lfs/git-lfs/releases/download/v3.7.0/git-lfs-linux-arm64-v3.7.0.tar.gz
         x-checker-data:
           project-id: 11551
           stable-only: true
@@ -93,7 +93,6 @@ modules:
       - type: file # https://www.jetbrains.com/company/brand/#logos-and-icons
         dest-filename: com.jetbrains.DataGrip.svg
         sha256: 3945f10efffe676fdd9bae8dab402ea0787697a3430cb6893834a268c84bd8da
-        size: 2271
         url: https://resources.jetbrains.com/storage/products/company/brand/logos/DataGrip_icon.svg
       - type: file
         path: idea.properties
