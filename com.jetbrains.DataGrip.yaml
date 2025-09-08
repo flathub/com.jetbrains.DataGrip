@@ -103,7 +103,7 @@ modules:
           - rm --force datagrip.tar.gz
         dest-filename: apply_extra.sh
 runtime: org.freedesktop.Sdk
-runtime-version: '24.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:
