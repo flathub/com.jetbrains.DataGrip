@@ -50,8 +50,8 @@ modules:
       - -Dprogram_name=datagrip
     sources:
       - type: git
-        commit: 5a054811ab2144ceaf343169b240a70eeb4dfb47
-        url: https://github.com/Lctrs/jetbrains-flatpak-wrapper.git
+        commit: d581fd9b873acbf6fb22899aa388435f6c00f61a
+        url: https://github.com/flathub-infra/ide-flatpak-wrapper.git
 
   - shared-modules/libsecret/libsecret.json
 
@@ -100,7 +100,7 @@ modules:
         commands:
           - install --directory --mode 0755 DG/
           - tar --directory DG/ --extract --file datagrip.tar.gz --gunzip --strip-components 1
-          - rm --force datagrip.tar.gz
+          - rm datagrip.tar.gz
         dest-filename: apply_extra.sh
 runtime: org.freedesktop.Sdk
 runtime-version: "25.08"
