@@ -53,8 +53,6 @@ modules:
         commit: d581fd9b873acbf6fb22899aa388435f6c00f61a
         url: https://github.com/flathub-infra/ide-flatpak-wrapper.git
 
-  - shared-modules/libsecret/libsecret.json
-
   - name: datagrip
     build-commands:
       - install -D --mode 0644 --target-directory /app/bin/ idea.properties
