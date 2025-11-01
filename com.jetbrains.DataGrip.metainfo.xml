@@ -1,114 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <id>com.jetbrains.DataGrip</id>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>LicenseRef-proprietary</project_license>
-  <name>DataGrip</name>
-  <summary>IntelliJ-based IDE for databases and SQL</summary>
+  <content_rating type="oars-1.1" />
   <description>
     <p>
-      DataGrip is the multi-engine database environment. We support MySQL, PostgreSQL, Microsoft SQL Server, Microsoft
-      Azure, Oracle, Amazon Redshift, Sybase, DB2, SQLite, HyperSQL, Apache Derby and H2. If a DBMS has a JDBC driver
-      you can connect to it via DataGrip. For any of supported engines it provides database introspection and various
-      instruments for creating and modifying objects.
+      DataGrip is the multi-engine database integrated development environment (IDE) from JetBrains
+      designed for SQL developers.
     </p>
     <p>
-      DataGrip is available for a free 30-day evaluation. Monthly and yearly subscription options are available for
-      companies and individual users.
+      It supports various databases and offers features like query consoles, schema navigation, and
+      smart code completion.
     </p>
-    <p>NOTE: This wrapper is not verified by, affiliated with, or supported by JetBrains s.r.o.</p>
+    <p>If the DBMS has a JDBC driver, you can connect to it via DataGrip.</p>
+    <p>Key features:</p>
+    <ul>
+      <li>
+        Multi-database connectivity: Connect via JDBC to PostgreSQL, Oracle, MySQL, MariaDB, SQLite,
+        SQL Server, Snowflake, Amazon Redshift, BigQuery, ClickHouse, MongoDB, and many others
+      </li>
+      <li>
+        Smart SQL editor: Schema-aware code completion, on-the-fly error highlighting, quick-fixes,
+        context-sensitive suggestions, refactorings, and code formatting
+      </li>
+      <li>
+        Query consoles: Multiple consoles with independent contexts; run, explain, and profile SQL
+        queries; result-set preview and export
+      </li>
+      <li>
+        Data editor and results: Excel-like editing, inline editing, sorting/filtering, pagination,
+        and export to CSV/JSON/Excel/Markdown
+      </li>
+      <li>
+        Schema and object tools: Database explorer, object DDL generation, visual diagrams, compare
+        and merge schemas, generate migration scripts
+      </li>
+      <li>
+        Data diff and compare: Compare tables or query results with visual diff and tolerance
+        settings
+      </li>
+      <li>
+        Version control and workflows: Git integration, local history, and ability to run SQL from
+        project files
+      </li>
+      <li>AI assistance (where available): Natural-language-to-SQL generation, explain query, and
+        context-aware help
+      </li>
+    </ul>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by JetBrains s.r.o.**</p>
   </description>
-  <launchable type="desktop-id">com.jetbrains.DataGrip.desktop</launchable>
-  <screenshots>
-    <screenshot type="default">
-      <image>https://www.jetbrains.com/datagrip/img/screenshots/query-console.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://www.jetbrains.com/datagrip/img/screenshots/sql-refactoring.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://www.jetbrains.com/datagrip/img/screenshots/version-control.png</image>
-    </screenshot>
-    <screenshot>
-      <image>https://www.jetbrains.com/datagrip/img/screenshots/completion.png</image>
-    </screenshot>
-  </screenshots>
-  <url type="bugtracker">https://youtrack.jetbrains.com/issues/DBE/</url>
-  <url type="homepage">https://www.jetbrains.com/datagrip/</url>
   <developer_name>JetBrains s.r.o.</developer_name>
-  <update_contact>datagrip@jetbrains.com</update_contact>
-  <content_rating type="oars-1.1"/>
+  <id>com.jetbrains.DataGrip</id>
+  <launchable type="desktop-id">com.jetbrains.DataGrip.desktop</launchable>
+  <metadata_license>CC0-1.0</metadata_license>
+  <name>DataGrip</name>
+  <project_license>LicenseRef-proprietary</project_license>
   <releases>
     <release version="2025.2.4" date="2025-10-01">
       <description></description>
     </release>
-    <release version="2025.2.3" date="2025-09-11">
-      <description/>
-    </release>
-    <release version="2025.2.2" date="2025-08-14">
-      <description/>
-    </release>
-    <release version="2025.2.1" date="2025-08-06">
-      <description/>
-    </release>
-    <release version="2025.2" date="2025-07-29">
-      <description/>
-    </release>
-    <release version="2025.1.3" date="2025-05-28">
-      <description/>
-    </release>
-    <release version="2025.1.2" date="2025-05-08">
-      <description/>
-    </release>
-    <release version="2025.1.1" date="2025-05-02">
-      <description/>
-    </release>
-    <release version="2025.1" date="2025-04-16">
-      <description/>
-    </release>
-    <release version="2024.3.5" date="2025-02-20">
-      <description/>
-    </release>
-    <release version="2024.3.4" date="2025-01-28">
-      <description/>
-    </release>
-    <release version="2024.3.3" date="2024-12-19">
-      <description/>
-    </release>
-    <release version="2024.3.2" date="2024-12-05">
-      <description/>
-    </release>
-    <release version="2024.3.1" date="2024-11-28">
-      <description/>
-    </release>
-    <release version="2024.3" date="2024-11-14">
-      <description/>
-    </release>
-    <release version="2024.2.2" date="2024-08-23">
-      <description/>
-    </release>
-    <release version="2024.1.5" date="2024-08-09">
-      <description/>
-    </release>
-    <release version="2024.1.4" date="2024-06-10">
-      <description/>
-    </release>
-    <release version="2024.1.3" date="2024-05-15"/>
-    <release version="2024.1.2" date="2024-04-16"/>
-    <release version="2024.1.1" date="2024-04-05"/>
-    <release version="2024.1" date="2024-04-03"/>
-    <release version="2023.3.4" date="2024-01-31"/>
-    <release version="2023.3.3" date="2024-01-18"/>
-    <release version="2023.3.2" date="2023-12-15"/>
-    <release version="2023.3.1" date="2023-12-12"/>
-    <release version="2023.3" date="2023-12-06"/>
-    <release version="2023.2.3" date="2023-10-25"/>
-    <release version="2023.2.2" date="2023-10-05"/>
-    <release version="2023.2.1" date="2023-08-17"/>
-    <release version="2023.2" date="2023-07-20"/>
-    <release version="2023.1.2" date="2023-05-17"/>
-    <release version="2023.1.1" date="2023-04-13"/>
-    <release version="2023.1" date="2023-03-28"/>
-    <release version="2022.3.2" date="2022-12-22"/>
   </releases>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Welcome Screen</caption>
+      <image>https://resources.jetbrains.com/help/img/idea/2025.2/db_qsg_welcome_screen_dark.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Database Explorer</caption>
+      <image>https://www.jetbrains.com/datagrip/features/img/mysql/Explore_database_objects.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Datasource Settings</caption>
+      <image>https://www.jetbrains.com/datagrip/features/img/postgresql/connect1.png</image>
+    </screenshot>
+  </screenshots>
+  <summary>The Cross-Platform IDE for Databases and SQL</summary>
+  <update_contact>datagrip@jetbrains.com</update_contact>
+  <url type="bugtracker">https://youtrack.jetbrains.com/issues/DBE/</url>
+  <url type="homepage">https://www.jetbrains.com/datagrip/</url>
 </component>
