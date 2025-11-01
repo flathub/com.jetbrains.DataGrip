@@ -16,32 +16,6 @@ finish-args:
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
 modules:
-  - name: git-lfs
-    build-commands:
-      - PREFIX=${FLATPAK_DEST} ./install.sh
-    buildsystem: simple
-    sources:
-      - type: archive
-        only-arches:
-          - x86_64
-        sha256: 1c0b6ee5200ca708c5cebebb18fdeb0e1c98f1af5c1a9cba205a4c0ab5a5ec08
-        url: https://github.com/git-lfs/git-lfs/releases/download/v3.7.1/git-lfs-linux-amd64-v3.7.1.tar.gz
-        x-checker-data:
-          project-id: 11551
-          stable-only: true
-          type: anitya
-          url-template: https://github.com/git-lfs/git-lfs/releases/download/v$version/git-lfs-linux-amd64-v$version.tar.gz
-      - type: archive
-        only-arches:
-          - aarch64
-        sha256: 73a9c90eeb4312133a63c3eaee0c38c019ea7bfa0953d174809d25b18588dd8d
-        url: https://github.com/git-lfs/git-lfs/releases/download/v3.7.1/git-lfs-linux-arm64-v3.7.1.tar.gz
-        x-checker-data:
-          project-id: 11551
-          stable-only: true
-          type: anitya
-          url-template: https://github.com/git-lfs/git-lfs/releases/download/v$version/git-lfs-linux-arm64-v$version.tar.gz
-
   - name: jetbrains-flatpak-wrapper
     buildsystem: meson
     config-opts:
