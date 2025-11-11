@@ -18,7 +18,7 @@ modules:
   - name: jetbrains-flatpak-wrapper
     buildsystem: meson
     config-opts:
-      - -Deditor_binary=/app/extra/DG/bin/datagrip
+      - -Deditor_binary=/app/extra/bin/datagrip
       - -Deditor_title=DataGrip
       - -Dprogram_name=datagrip
     sources:
@@ -69,8 +69,7 @@ modules:
         path: idea.properties
       - type: script
         commands:
-          - install -d -m 755 DG/
-          - bsdtar -C DG/ -f datagrip.tar.gz -x -z --strip-components=1
+          - bsdtar -f datagrip.tar.gz -x -z --strip-components=1
           - rm datagrip.tar.gz
         dest-filename: post-install-setup.sh
 runtime: org.freedesktop.Sdk
