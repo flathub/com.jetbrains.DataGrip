@@ -39,9 +39,9 @@ modules:
         filename: datagrip.tar.gz
         only-arches:
           - aarch64
-        sha256: 7df40778500a599d565ba985d1583f3334903fbb731f53add526b19557208d97
-        size: 1061585545
-        url: https://download.jetbrains.com/datagrip/datagrip-2025.2.4-aarch64.tar.gz
+        sha256: 426fb71e1edb2d6a7c5aa0e2b62b3b766f0982404054595e3a5aae79f72ee2f8
+        size: 1062113113
+        url: https://download.jetbrains.com/datagrip/datagrip-2025.2.5-aarch64.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
@@ -50,9 +50,9 @@ modules:
         filename: datagrip.tar.gz
         only-arches:
           - x86_64
-        sha256: 37d0af4ec30b94c71d3507fe35b3b0bdd389903db7e2f1a8ed73353b22718476
-        size: 1064074255
-        url: https://download.jetbrains.com/datagrip/datagrip-2025.2.4.tar.gz
+        sha256: cc0ed935e2d9f52c037e79fe9ed5485702d23feaf94646ea448a5eef341fae04
+        size: 1064567839
+        url: https://download.jetbrains.com/datagrip/datagrip-2025.2.5.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
@@ -73,7 +73,7 @@ modules:
           - rm datagrip.tar.gz
         dest-filename: post-install-setup.sh
 runtime: org.freedesktop.Sdk
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:

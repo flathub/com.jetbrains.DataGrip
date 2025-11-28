@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="desktop-application">
-  <content_rating type="oars-1.1" />
+  <content_rating type="oars-1.1"/>
   <description>
     <p>
       DataGrip is the multi-engine database integrated development environment (IDE) from JetBrains
@@ -54,8 +54,11 @@
   <name>DataGrip</name>
   <project_license>LicenseRef-proprietary</project_license>
   <releases>
-    <release version="2025.2.4" date="2025-10-01">
+    <release version="2025.2.5" date="2025-11-28">
       <description></description>
+    </release>
+    <release version="2025.2.4" date="2025-10-01">
+      <description/>
     </release>
   </releases>
   <screenshots>
