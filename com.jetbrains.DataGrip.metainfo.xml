@@ -54,8 +54,11 @@
   <name>DataGrip</name>
   <project_license>LicenseRef-proprietary</project_license>
   <releases>
-    <release version="2025.2.5" date="2025-11-28">
+    <release version="2025.3" date="2025-12-02">
       <description></description>
+    </release>
+    <release version="2025.2.5" date="2025-11-28">
+      <description/>
     </release>
     <release version="2025.2.4" date="2025-10-01">
       <description/>
