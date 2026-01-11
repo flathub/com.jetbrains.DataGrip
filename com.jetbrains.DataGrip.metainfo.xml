@@ -2,6 +2,7 @@
 <component type="desktop-application">
   <content_rating type="oars-1.1"/>
   <description>
+    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by JetBrains s.r.o.**</p>
     <p>
       DataGrip is the multi-engine database integrated development environment (IDE) from JetBrains
       designed for SQL developers.
@@ -45,7 +46,6 @@
         context-aware help
       </li>
     </ul>
-    <p>**NOTE: This wrapper is not verified by, affiliated with, or supported by JetBrains s.r.o.**</p>
   </description>
   <developer_name>JetBrains s.r.o.</developer_name>
   <id>com.jetbrains.DataGrip</id>
