@@ -14,6 +14,7 @@ finish-args:
   - --socket=x11
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
+  - --talk-name=org.freedesktop.FileManager1
 modules:
   - name: jetbrains-flatpak-wrapper
     buildsystem: meson
