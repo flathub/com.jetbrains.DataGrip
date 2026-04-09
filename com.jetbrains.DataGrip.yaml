@@ -3,24 +3,24 @@ command: datagrip
 finish-args:
   - --allow=devel
   - --device=all
-  - --env=DATAGRIP_PROPERTIES=/app/bin/idea.properties
+  - --env=DATAGRIP_PROPERTIES=/app/bin/idea.override.properties
   - --filesystem=host
   - --filesystem=xdg-run/gnupg
   - --filesystem=xdg-run/keyring
   - --share=ipc
   - --share=network
+  - --socket=fallback-x11
   - --socket=gpg-agent
   - --socket=ssh-auth
-  - --socket=fallback-x11
   - --socket=wayland
+  - --talk-name=org.freedesktop.FileManager1
   - --talk-name=org.freedesktop.Flatpak
   - --talk-name=org.freedesktop.secrets
-  - --talk-name=org.freedesktop.FileManager1
 modules:
   - name: jetbrains-flatpak-wrapper
     buildsystem: meson
     config-opts:
-      - -Deditor_binary=/app/extra/bin/datagrip
+      - -Deditor_binary=/app/bin/datagrip
       - -Deditor_title=DataGrip
       - -Dprogram_name=datagrip
     sources:
@@ -30,30 +30,28 @@ modules:
 
   - name: datagrip
     build-commands:
+      - bsdtar -C /app -f datagrip.tar.gz -x -z --strip-components=1
       - install -D -m 644 -t /app/share/applications/ ${FLATPAK_ID}.desktop
       - install -D -m 644 -t /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
-      - install -D -m 644 -t /app/share/icons/hicolor/scalable/apps/ ${FLATPAK_ID}.svg
-      - install -D -m 644 -t /app/bin/ idea.properties
-      - install -D -m 755 post-install-setup.sh /app/bin/apply_extra
+      - install -D -m 644 /app/bin/datagrip.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+      - install -D -m 644 idea.properties /app/bin/idea.override.properties
     buildsystem: simple
     sources:
-      - type: extra-data
-        filename: datagrip.tar.gz
+      - type: file
+        dest-filename: datagrip.tar.gz
         only-arches:
           - aarch64
         sha256: 07fd16e2ee353d42731752eba64ab923e645c139accc58c14c266773088d0a2d
-        size: 1112920858
         url: https://download.jetbrains.com/datagrip/datagrip-2026.1.1-aarch64.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
           type: jetbrains
-      - type: extra-data
-        filename: datagrip.tar.gz
+      - type: file
+        dest-filename: datagrip.tar.gz
         only-arches:
           - x86_64
         sha256: 5d7e4687ec137a9e04a96ee93f59c156dc664a9b9844583bc4af80515d2a3ede
-        size: 1117187385
         url: https://download.jetbrains.com/datagrip/datagrip-2026.1.1.tar.gz
         x-checker-data:
           code: DG
@@ -63,19 +61,10 @@ modules:
         path: com.jetbrains.DataGrip.desktop
       - type: file
         path: com.jetbrains.DataGrip.metainfo.xml
-      - type: file # https://www.jetbrains.com/company/brand/#logos-and-icons
-        dest-filename: com.jetbrains.DataGrip.svg
-        sha256: 3945f10efffe676fdd9bae8dab402ea0787697a3430cb6893834a268c84bd8da
-        url: https://resources.jetbrains.com/storage/products/company/brand/logos/DataGrip_icon.svg
       - type: file
         path: idea.properties
-      - type: script
-        commands:
-          - bsdtar -f datagrip.tar.gz -x -z --strip-components=1
-          - rm datagrip.tar.gz
-        dest-filename: post-install-setup.sh
 runtime: org.freedesktop.Sdk
-runtime-version: '25.08'
+runtime-version: "25.08"
 sdk: org.freedesktop.Sdk
 separate-locales: false
 tags:
