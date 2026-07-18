@@ -41,8 +41,8 @@ modules:
         dest-filename: datagrip.tar.gz
         only-arches:
           - aarch64
-        sha256: 5da0c2f3e673b4b3b76421c9ae370d14c123f510914b24d8a90d0c7b6b829d1a
-        url: https://download.jetbrains.com/datagrip/datagrip-2026.1.4-aarch64.tar.gz
+        sha256: 56b15dcc4a8c5a4de82e4b8419d8f3d7d14d96303df067495cc239c9a989476a
+        url: https://download.jetbrains.com/datagrip/datagrip-2026.2-aarch64.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
@@ -51,8 +51,8 @@ modules:
         dest-filename: datagrip.tar.gz
         only-arches:
           - x86_64
-        sha256: 3d871c6a4d15583e399e67b0486ca497e41d9111daff0d8ab46892ae80cad8ae
-        url: https://download.jetbrains.com/datagrip/datagrip-2026.1.4.tar.gz
+        sha256: 9d68d1b6435cb9850c63b6f98a704346abc07a84826c30ab2fcbb3da4516c46f
+        url: https://download.jetbrains.com/datagrip/datagrip-2026.2.tar.gz
         x-checker-data:
           code: DG
           is-main-source: true
