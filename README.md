@@ -1,7 +1,5 @@
 # JetBrains DataGrip Flatpak
 
-![DataGrip Logo](./docs/datagrip.svg)
-
 [DataGrip][uri-datagrip-home] is JetBrains' multi-engine database integrated
 development environment (IDE) designed for SQL developers. It supports various
 databases and offers features like query consoles, schema navigation, and smart
