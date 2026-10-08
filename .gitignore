@@ -1,31 +1,6 @@
-# ==================================================================================================
-#   Git Configuration for Ignored Files and Directories
-# ==================================================================================================
-
-.flatpak-builder/
-
-.fleet/
 !.fleet/*.json
-
-.idea/
-
-.settings/
-
-.vscode/
 !.vscode/*.json
-
-.zed/
 !.zed/*.json
-
-build/
-
-.DS_Store
-.classpath
-.env
-.project
-.tool-versions
-Thumbs.db
-desktop.ini
 *.iml
 *.ipr
 *.iws
@@ -33,3 +8,18 @@ desktop.ini
 *.tar
 *.tgz
 *.zip
+.classpath
+.DS_Store
+.env
+.flatpak-builder/
+.fleet/
+.idea/
+.project
+.settings/
+.tool-versions
+.vscode/
+.zed/
+build/
+desktop.ini
+repo/
+Thumbs.db

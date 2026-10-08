@@ -1,6 +1,8 @@
-# JetBrains DataGrip
+# JetBrains DataGrip Flatpak
 
-[DataGrip][uri-datagrip-home] is JetBrains' the multi-engine database integrated
+![DataGrip Logo](./docs/datagrip.svg)
+
+[DataGrip][uri-datagrip-home] is JetBrains' multi-engine database integrated
 development environment (IDE) designed for SQL developers. It supports various
 databases and offers features like query consoles, schema navigation, and smart
 code completion. If the DBMS has a JDBC driver, you can connect to it via
@@ -8,30 +10,29 @@ DataGrip.
 
 [uri-datagrip-home]: https://www.jetbrains.com/datagrip/ "The Cross-Platform IDE for Databases & SQL"
 
-## Local Development — Build and Install Flatpak
+## Building Flatpak Package Locally
 
-Install `flatpak`, `flatpak-builder` and `git`, then run:
+Install flatpak-builder:
 
-```shell
-# Ensure Flathub remote exists for the current user
-$ flatpak remote-add --if-not-exists --user flathub https://flathub.org/repo/flathub.flatpakrepo
-
-$ git clone https://github.com/flathub/com.jetbrains.DataGrip.git
-$ com.jetbrains.DataGrip/
-
-$ flatpak-builder build --force-clean --install-deps-from=flathub --install --user com.jetbrains.DataGrip.yaml
+```bash
+flatpak install --user --assumeyes flathub org.flatpak.Builder
 ```
 
-To uninstall:
+Add Flathub as a user-wide repo:
 
-```shell
-$ flatpak uninstall --delete-data --user com.jetbrains.DataGrip
+```bash
+> flatpak remote-add --if-not-exists --user flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
-To clean up build artifacts and Flatpak state:
+Build DataGrip flatpak (for current architecture, including install):
 
-```shell
-$ rm --force --recursive .flatpak-builder/ build/
-$ flatpak uninstall --unused --user
-$ flatpak remote-delete --user flathub
+```bash
+> ./build.sh
+```
+
+Build flatpak for specific architecture, without install:
+
+```bash
+> ./build-aarch64.sh
+> ./build-x86_64.sh
 ```

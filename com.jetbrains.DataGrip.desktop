@@ -1,14 +1,12 @@
 [Desktop Entry]
-# REQUIRED
-Name=DataGrip
-Type=Application
-# OPTIONAL
 Categories=Development;IDE;
-Comment=The Cross-Platform IDE for Databases and SQL
-Exec=datagrip
+Comment=Your powerful cross-platform IDE for relational and NoSQL databases
+Exec=datagrip-wrapper
+GenericName=Tool for multiple databases
 Icon=com.jetbrains.DataGrip
 Keywords=database;ide;sql;
+Name=DataGrip
 StartupNotify=false
 StartupWMClass=jetbrains-datagrip
 Terminal=false
-Version=1.0
+Type=Application

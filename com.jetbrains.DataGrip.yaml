@@ -1,71 +1,85 @@
 app-id: com.jetbrains.DataGrip
-command: datagrip
+runtime: org.freedesktop.Sdk
+runtime-version: "26.08"
+sdk: org.freedesktop.Sdk
+command: datagrip-wrapper
+separate-locales: false
+tags:
+  - proprietary
 finish-args:
-  - --allow=devel
-  - --device=all
-  - --env=DATAGRIP_PROPERTIES=/app/bin/idea.override.properties
-  - --filesystem=host
-  - --filesystem=xdg-run/gnupg
-  - --filesystem=xdg-run/keyring
+  # Direct Rendering Infrastructure, for GPU access
+  - --device=dri
+  # User home dir, as that's usually where projects are store
+  - --filesystem=home
+  # Necessary for reasonable X11 performance
   - --share=ipc
+  # Network access, kinda necessary for most database access
   - --share=network
+  # Talking to X11
   - --socket=fallback-x11
+  # GPG access may be necessary for Git commit signing
   - --socket=gpg-agent
+  # SSH agent access for authentication
   - --socket=ssh-auth
+  # Wayland desktop
   - --socket=wayland
+  # Use the host file manager
   - --talk-name=org.freedesktop.FileManager1
-  - --talk-name=org.freedesktop.Flatpak
+  # Secrets portal, for storing credentials in the host keyring
   - --talk-name=org.freedesktop.secrets
 modules:
-  - name: jetbrains-flatpak-wrapper
+  - name: datagrip
+    build-commands:
+      # App binaries
+      - cp -a DataGrip-*/* ${FLATPAK_DEST}
+      # Desktop file
+      - install -D -m 644 -t /app/share/applications/ ${FLATPAK_ID}.desktop
+      # Flatpak metadata
+      - install -D -m 644 -t /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
+      # Icon
+      - install -D -m 644 /app/bin/datagrip.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
+    buildsystem: simple
+
+    sources:
+      # App binaries - x64
+      - type: archive
+        strip-components: 0
+        url: https://download.jetbrains.com/datagrip/datagrip-2026.2.6.tar.gz
+        sha256: 7326e0ee44e495b9c92c09ae36f53d0a69347decc23331888cec85a6486cd12d
+        only-arches:
+          - x86_64
+        x-checker-data:
+          type: jetbrains
+          code: DG
+          is-main-source: true
+
+      # App binaries - arm64
+      - type: archive
+        strip-components: 0
+        url: https://download.jetbrains.com/datagrip/datagrip-2026.2.6-aarch64.tar.gz
+        sha256: ff463e97d72dfd977c4b0bc3fa09643f268d1c11471b03f2297b1d7ec8850b9d
+        only-arches:
+          - aarch64
+        x-checker-data:
+          type: jetbrains
+          code: DG
+          is-main-source: true
+
+      # Desktop file
+      - type: file
+        path: com.jetbrains.DataGrip.desktop
+
+      # Flatpak metadata
+      - type: file
+        path: com.jetbrains.DataGrip.metainfo.xml
+
+  - name: ide-flatpak-wrapper
     buildsystem: meson
     config-opts:
       - -Deditor_binary=/app/bin/datagrip
       - -Deditor_title=DataGrip
-      - -Dprogram_name=datagrip
+      - -Dprogram_name=datagrip-wrapper
     sources:
       - type: git
-        commit: d581fd9b873acbf6fb22899aa388435f6c00f61a
         url: https://github.com/flathub-infra/ide-flatpak-wrapper.git
-
-  - name: datagrip
-    build-commands:
-      - bsdtar -C /app -f datagrip.tar.gz -x -z --strip-components=1
-      - install -D -m 644 -t /app/share/applications/ ${FLATPAK_ID}.desktop
-      - install -D -m 644 -t /app/share/metainfo/ ${FLATPAK_ID}.metainfo.xml
-      - install -D -m 644 /app/bin/datagrip.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg
-      - install -D -m 644 idea.properties /app/bin/idea.override.properties
-    buildsystem: simple
-    sources:
-      - type: file
-        dest-filename: datagrip.tar.gz
-        only-arches:
-          - aarch64
-        sha256: 56b15dcc4a8c5a4de82e4b8419d8f3d7d14d96303df067495cc239c9a989476a
-        url: https://download.jetbrains.com/datagrip/datagrip-2026.2-aarch64.tar.gz
-        x-checker-data:
-          code: DG
-          is-main-source: true
-          type: jetbrains
-      - type: file
-        dest-filename: datagrip.tar.gz
-        only-arches:
-          - x86_64
-        sha256: 9d68d1b6435cb9850c63b6f98a704346abc07a84826c30ab2fcbb3da4516c46f
-        url: https://download.jetbrains.com/datagrip/datagrip-2026.2.tar.gz
-        x-checker-data:
-          code: DG
-          is-main-source: true
-          type: jetbrains
-      - type: file
-        path: com.jetbrains.DataGrip.desktop
-      - type: file
-        path: com.jetbrains.DataGrip.metainfo.xml
-      - type: file
-        path: idea.properties
-runtime: org.freedesktop.Sdk
-runtime-version: '25.08'
-sdk: org.freedesktop.Sdk
-separate-locales: false
-tags:
-  - proprietary
+        commit: d581fd9b873acbf6fb22899aa388435f6c00f61a
