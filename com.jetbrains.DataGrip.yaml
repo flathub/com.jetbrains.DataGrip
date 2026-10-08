@@ -9,9 +9,8 @@ tags:
 finish-args:
   # Direct Rendering Infrastructure, for GPU access
   - --device=dri
-  # # User home dir, as that's usually where projects are store
-  # # TODO: Add this? If so, we need an exception.
-  # - --filesystem=home
+  # File system access
+  - --filesystem=host
   # Necessary for reasonable X11 performance
   - --share=ipc
   # Network access, kinda necessary for most database access
