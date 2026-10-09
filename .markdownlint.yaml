@@ -1,0 +1,5 @@
+---
+default: True
+MD010: False
+MD013: False
+MD034: False
