@@ -10,6 +10,7 @@ finish-args:
   # Direct Rendering Infrastructure, for GPU access
   - --device=dri
   # File system access
+  # TODO: Change to --filesystem=home?
   - --filesystem=host
   # Necessary for reasonable X11 performance
   - --share=ipc
@@ -41,7 +42,7 @@ modules:
     buildsystem: simple
 
     sources:
-      # App binaries - x64
+      # App binaries - x86_64
       - type: archive
         strip-components: 0
         url: https://download.jetbrains.com/datagrip/datagrip-2026.2.6.tar.gz
@@ -53,7 +54,7 @@ modules:
           code: DG
           is-main-source: true
 
-      # App binaries - arm64
+      # App binaries - aarch64
       - type: archive
         strip-components: 0
         url: https://download.jetbrains.com/datagrip/datagrip-2026.2.6-aarch64.tar.gz
