@@ -1,6 +1,6 @@
 app-id: com.jetbrains.DataGrip
 runtime: org.freedesktop.Sdk
-runtime-version: "26.08"
+runtime-version: '26.08'
 sdk: org.freedesktop.Sdk
 command: datagrip-wrapper
 separate-locales: false
@@ -44,8 +44,8 @@ modules:
       # App binaries - x64
       - type: archive
         strip-components: 0
-        url: https://download.jetbrains.com/datagrip/datagrip-2026.2.6.tar.gz
-        sha256: 7326e0ee44e495b9c92c09ae36f53d0a69347decc23331888cec85a6486cd12d
+        url: https://download.jetbrains.com/datagrip/datagrip-2026.2.6.1.tar.gz
+        sha256: 0127b0b46e9a8bd2f65130b3968b0cd04ff30d839f91f2b3809e64934db989ea
         only-arches:
           - x86_64
         x-checker-data:
@@ -56,8 +56,8 @@ modules:
       # App binaries - arm64
       - type: archive
         strip-components: 0
-        url: https://download.jetbrains.com/datagrip/datagrip-2026.2.6-aarch64.tar.gz
-        sha256: ff463e97d72dfd977c4b0bc3fa09643f268d1c11471b03f2297b1d7ec8850b9d
+        url: https://download.jetbrains.com/datagrip/datagrip-2026.2.6.1-aarch64.tar.gz
+        sha256: f593c153602d1d9643a36f75947f0ad0de56f2fa8437d5bddd19eccde2c1468f
         only-arches:
           - aarch64
         x-checker-data:
