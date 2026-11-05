@@ -51,7 +51,7 @@
   <launchable type="desktop-id">com.jetbrains.DataGrip.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
   <name>DataGrip</name>
-  <project_license>LicenseRef-proprietary</project_license>
+  <project_license>LicenseRef-proprietary=https://www.jetbrains.com/legal/docs/toolbox/user/</project_license>
   <releases>
     <release version="2026.2.6.1" date="2026-10-30">
       <description></description>
