@@ -30,6 +30,10 @@ Build DataGrip flatpak (for current architecture, including install):
 
 Build flatpak for specific architecture, without install:
 
+> [!NOTE]
+> To build for an architecture different than the current machine,
+> install `qemu-user-static` and `qemu-user-static-binfmt`.
+
 ```bash
 > ./build-aarch64.sh
 > ./build-x86_64.sh
