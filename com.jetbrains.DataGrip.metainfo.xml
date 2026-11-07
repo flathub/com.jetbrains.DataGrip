@@ -53,8 +53,12 @@
   <name>DataGrip</name>
   <project_license>LicenseRef-proprietary=https://www.jetbrains.com/legal/docs/toolbox/user/</project_license>
   <releases>
-    <release version="2026.2.6.1" date="2026-10-30">
+    <release version="2026.3" date="2026-11-05">
+      <url type="details">https://youtrack.jetbrains.com/articles/DBE-A-83165563</url>
       <description></description>
+    </release>
+    <release version="2026.2.6.1" date="2026-10-30">
+      <description/>
     </release>
     <release version="2026.2.6" date="2026-09-29">
       <description/>
