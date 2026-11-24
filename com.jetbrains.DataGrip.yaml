@@ -44,8 +44,8 @@ modules:
       # App binaries - x64
       - type: archive
         strip-components: 0
-        url: https://download.jetbrains.com/datagrip/datagrip-2026.3.tar.gz
-        sha256: efdc1a568758ab4bbba2cb3d1f52b63849a10e7ddd2c136ed9c26fd32fb80650
+        url: https://download.jetbrains.com/datagrip/datagrip-2026.3.0.1.tar.gz
+        sha256: 58b6a60b791f4e59bb27ec92ed4b09815a72c54862a456749b9633ae687957b7
         only-arches:
           - x86_64
         x-checker-data:
@@ -56,8 +56,8 @@ modules:
       # App binaries - arm64
       - type: archive
         strip-components: 0
-        url: https://download.jetbrains.com/datagrip/datagrip-2026.3-aarch64.tar.gz
-        sha256: ad562b0dd2653f1bfab9104c495bc0ba9112496c5ef4f5270cc5f25e7b460673
+        url: https://download.jetbrains.com/datagrip/datagrip-2026.3.0.1-aarch64.tar.gz
+        sha256: 82b8f067e96e607f90189bc06895901a41956d44fc50dc02d9994c4f284eb4a7
         only-arches:
           - aarch64
         x-checker-data:
